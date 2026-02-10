@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Practica1_MAUI_WilmarGomez_20240103.DetallesPage"
+             BackgroundColor="#FAF7F2"
+             NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,50,30,30"
+            Spacing="0">
+
+            <!-- Linea decorativa superior -->
+            <BoxView
+                HeightRequest="2"
+                Color="#2D2926"
+                WidthRequest="40"
+                HorizontalOptions="Center"
+                Margin="0,0,0,25" />
+
+            <!-- Titulo -->
+            <Label
+                Text="Detalles"
+                FontSize="28"
+                FontFamily="NotoSerif"
+                FontAttributes="Bold"
+                TextColor="#2D2926"
+                HorizontalTextAlignment="Center"
+                Margin="0,0,0,5" />
+
+            <Label
+                Text="Arquitectura .NET MAUI"
+                FontSize="13"
+                TextColor="#8B7355"
+                HorizontalTextAlignment="Center"
+                Margin="0,0,0,25" />
+
+            <!-- Separador -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="15" Margin="0,0,0,25">
+                <BoxView HeightRequest="1" WidthRequest="30" Color="#D4CFC6" VerticalOptions="Center" />
+                <Label Text="/" FontSize="14" TextColor="#C8B88A" VerticalOptions="Center" />
+                <BoxView HeightRequest="1" WidthRequest="30" Color="#D4CFC6" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+
+            <!-- Tarjeta 1: Estructura -->
+            <Border
+                StrokeShape="RoundRectangle 4"
+                Stroke="#D4CFC6"
+                StrokeThickness="1"
+                BackgroundColor="#FFFFFF"
+                Padding="20"
+                Margin="0,0,0,15">
+
+                <VerticalStackLayout Spacing="8">
+                    <Label
+                        Text="Estructura del Proyecto"
+                        FontSize="16"
+                        FontFamily="NotoSerif"
+                        FontAttributes="Bold"
+                        TextColor="#2D2926" />
+
+                    <BoxView HeightRequest="1" Color="#F5F0E8" Margin="0,2" />
+
+                    <Label
+                        Text="MauiProgram.cs - Configura e inicializa la aplicacion"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="App.xaml - Define recursos globales de la aplicacion"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="App.xaml.cs - Punto de entrada y ciclo de vida"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="MainPage.xaml - Interfaz de la pagina principal"
+                        FontSize="12"
+                        TextColor="#787068" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Tarjeta 2: Recursos -->
+            <Border
+                StrokeShape="RoundRectangle 4"
+                Stroke="#D4CFC6"
+                StrokeThickness="1"
+                BackgroundColor="#FFFFFF"
+                Padding="20"
+                Margin="0,0,0,15">
+
+                <VerticalStackLayout Spacing="8">
+                    <Label
+                        Text="Carpeta Resources"
+                        FontSize="16"
+                        FontFamily="NotoSerif"
+                        FontAttributes="Bold"
+                        TextColor="#2D2926" />
+
+                    <BoxView HeightRequest="1" Color="#F5F0E8" Margin="0,2" />
+
+                    <Label
+                        Text="AppIcon/ - Iconos de la aplicacion (SVG)"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="Fonts/ - Fuentes tipograficas (TTF)"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="Images/ - Imagenes de la app (PNG)"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="Splash/ - Pantalla de carga (SVG)"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="Styles/ - Colores y estilos globales (XAML)"
+                        FontSize="12"
+                        TextColor="#787068" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Tarjeta 3: Plataformas -->
+            <Border
+                StrokeShape="RoundRectangle 4"
+                Stroke="#D4CFC6"
+                StrokeThickness="1"
+                BackgroundColor="#FFFFFF"
+                Padding="20"
+                Margin="0,0,0,15">
+
+                <VerticalStackLayout Spacing="8">
+                    <Label
+                        Text="Carpeta Platforms"
+                        FontSize="16"
+                        FontFamily="NotoSerif"
+                        FontAttributes="Bold"
+                        TextColor="#2D2926" />
+
+                    <BoxView HeightRequest="1" Color="#F5F0E8" Margin="0,2" />
+
+                    <Label
+                        Text="Android/ - Configuracion especifica de Android"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="iOS/ - Configuracion especifica de iOS"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="Windows/ - Configuracion especifica de Windows"
+                        FontSize="12"
+                        TextColor="#787068" />
+                    <Label
+                        Text="MacCatalyst/ - Configuracion especifica de macOS"
+                        FontSize="12"
+                        TextColor="#787068" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Tarjeta 4: Navegacion -->
+            <Border
+                StrokeShape="RoundRectangle 4"
+                Stroke="#C8A2A2"
+                StrokeThickness="1"
+                BackgroundColor="#FFFFFF"
+                Padding="20"
+                Margin="0,0,0,25">
+
+                <VerticalStackLayout Spacing="8">
+                    <Label
+                        Text="Navegacion en MAUI"
+                        FontSize="16"
+                        FontFamily="NotoSerif"
+                        FontAttributes="Bold"
+                        TextColor="#2D2926" />
+
+                    <BoxView HeightRequest="1" Color="#F5F0E8" Margin="0,2" />
+
+                    <Label
+                        Text="NavigationPage permite la navegacion por pila (stack). Se usa PushAsync para ir a una nueva pagina y PopAsync para regresar. La barra de navegacion aparece automaticamente."
+                        FontSize="12"
+                        TextColor="#787068"
+                        LineHeight="1.4" />
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Boton regresar -->
+            <Border
+                StrokeShape="RoundRectangle 4"
+                Stroke="#D4CFC6"
+                StrokeThickness="1"
+                BackgroundColor="Transparent"
+                Padding="0"
+                Margin="0,0,0,15">
+
+                <Button
+                    x:Name="btnRegresar"
+                    Text="Regresar"
+                    FontSize="14"
+                    TextColor="#8B7355"
+                    BackgroundColor="Transparent"
+                    BorderWidth="0"
+                    HeightRequest="50"
+                    Clicked="OnRegresarClicked"
+                    HorizontalOptions="Fill" />
+            </Border>
+
+            <!-- Footer -->
+            <Label
+                Text="Practica 2 - Explorando la Arquitectura"
+                FontSize="10"
+                TextColor="#B5AFA5"
+                HorizontalTextAlignment="Center"
+                Margin="0,5,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
