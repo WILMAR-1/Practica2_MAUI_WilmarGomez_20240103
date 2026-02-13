@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace Practica1_MAUI_WilmarGomez_20240103;
+namespace Practica2_MAUI_WilmarGomez_20240103;
 
 [Application]
 public class MainApplication : MauiApplication
