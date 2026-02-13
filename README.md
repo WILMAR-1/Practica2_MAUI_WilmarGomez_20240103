@@ -51,3 +51,29 @@ Este archivo es el corazón de la configuración de la aplicación.
 
 -   **¿Por qué es importante `builder.Build()`?**
     -   Finaliza el proceso de configuración y construye el objeto `MauiApp` que representa la aplicación configurada, lista para ser ejecutada.
+
+---
+
+## 4. Análisis de Código Específico de Plataforma (Bonus)
+
+Esta sección aborda las preguntas del bonus sobre los archivos específicos de la plataforma.
+
+-   **¿Qué información contiene `AndroidManifest.xml`?**
+    -   Contiene información esencial sobre la aplicación para las herramientas de compilación de Android, el sistema operativo Android y Google Play. Esto incluye el nombre del paquete de la aplicación, los permisos que requiere la aplicación (como el acceso a Internet) y las definiciones de los componentes de la aplicación.
+
+-   **¿Para qué sirve el archivo `Package.appxmanifest` en Windows?**
+    -   Es el archivo de manifiesto para las aplicaciones de Windows (UWP). Define la identidad de la aplicación (nombre, editor), las capacidades (lo que puede hacer, como `runFullTrust`), los elementos visuales (logotipos, pantalla de inicio) y las dependencias necesarias para ejecutarse en Windows.
+
+-   **¿Por qué necesitamos archivos específicos si MAUI es multiplataforma?**
+    -   Aunque MAUI abstrae la mayor parte de la interfaz de usuario y la lógica en una única base de código, cada plataforma (Android, iOS, Windows) tiene un conjunto único de características, permisos y requisitos de empaquetado. Estos archivos específicos de la plataforma permiten a los desarrolladores configurar estos ajustes nativos y, si es necesario, escribir código nativo que las API multiplataforma de MAUI no cubren.
+
+### Contenido de `AndroidManifest.xml`
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true"></application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>
+```
