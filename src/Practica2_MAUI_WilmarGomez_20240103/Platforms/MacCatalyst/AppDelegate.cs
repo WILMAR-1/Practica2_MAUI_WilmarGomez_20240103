@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Practica1_MAUI_WilmarGomez_20240103;
+namespace Practica2_MAUI_WilmarGomez_20240103;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

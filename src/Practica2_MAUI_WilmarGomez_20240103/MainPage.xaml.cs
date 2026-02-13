@@ -1,4 +1,4 @@
-namespace Practica1_MAUI_WilmarGomez_20240103;
+namespace Practica2_MAUI_WilmarGomez_20240103;
 
 public partial class MainPage : ContentPage
 {
@@ -27,15 +27,15 @@ public partial class MainPage : ContentPage
 		await Task.Delay(200);
 
 		await Task.WhenAll(
-			BotContainer.FadeTo(1, 800, Easing.CubicOut),
-			BotContainer.ScaleTo(1, 800, Easing.SpringOut)
+			BotContainer.FadeToAsync(1, 800, Easing.CubicOut),
+			BotContainer.ScaleToAsync(1, 800, Easing.SpringOut)
 		);
 
-		await TitleLabel.FadeTo(1, 500, Easing.CubicOut);
+		await TitleLabel.FadeToAsync(1, 500, Easing.CubicOut);
 
 		await Task.WhenAll(
-			GameContainer.FadeTo(1, 500, Easing.CubicOut),
-			GameContainer.TranslateTo(0, 0, 500, Easing.CubicOut)
+			GameContainer.FadeToAsync(1, 500, Easing.CubicOut),
+			GameContainer.TranslateToAsync(0, 0, 500, Easing.CubicOut)
 		);
 	}
 
@@ -43,15 +43,15 @@ public partial class MainPage : ContentPage
 	{
 		while (isAnimating)
 		{
-			await BotImage.TranslateTo(0, -8, 2000, Easing.SinInOut);
-			await BotImage.TranslateTo(0, 8, 2000, Easing.SinInOut);
+			await BotImage.TranslateToAsync(0, -8, 2000, Easing.SinInOut);
+			await BotImage.TranslateToAsync(0, 8, 2000, Easing.SinInOut);
 		}
 	}
 
 	private async void OnGameButtonClicked(object? sender, EventArgs e)
 	{
-		await GameBtn.ScaleTo(0.95, 50, Easing.CubicIn);
-		await GameBtn.ScaleTo(1, 100, Easing.SpringOut);
+		await GameBtn.ScaleToAsync(0.95, 50, Easing.CubicIn);
+		await GameBtn.ScaleToAsync(1, 100, Easing.SpringOut);
 
 		if (!isGameRunning)
 		{
@@ -62,12 +62,12 @@ public partial class MainPage : ContentPage
 			score++;
 			ScoreLabel.Text = score.ToString();
 
-			await ScoreLabel.ScaleTo(1.3, 50, Easing.CubicOut);
-			await ScoreLabel.ScaleTo(1, 50, Easing.CubicIn);
+			await ScoreLabel.ScaleToAsync(1.3, 50, Easing.CubicOut);
+			await ScoreLabel.ScaleToAsync(1, 50, Easing.CubicIn);
 
 			if (score % 5 == 0)
 			{
-				_ = BotImage.RotateTo(BotImage.Rotation + 360, 400, Easing.CubicOut);
+				_ = BotImage.RotateToAsync(BotImage.Rotation + 360, 400, Easing.CubicOut);
 			}
 		}
 	}
@@ -95,8 +95,8 @@ public partial class MainPage : ContentPage
 		timeLeft--;
 		TimerLabel.Text = $"{timeLeft}s";
 
-		await TimerLabel.ScaleTo(1.2, 100, Easing.CubicOut);
-		await TimerLabel.ScaleTo(1, 100, Easing.CubicIn);
+		await TimerLabel.ScaleToAsync(1.2, 100, Easing.CubicOut);
+		await TimerLabel.ScaleToAsync(1, 100, Easing.CubicIn);
 
 		if (timeLeft <= 3)
 		{
@@ -131,9 +131,9 @@ public partial class MainPage : ContentPage
 			StatusLabel.Text = $"Nuevo record: {score} clicks!";
 			StatusLabel.TextColor = Color.FromArgb("#7B8B6F");
 
-			await BotImage.RotateTo(BotImage.Rotation + 720, 800, Easing.CubicOut);
-			await GameContainer.ScaleTo(1.03, 200, Easing.CubicOut);
-			await GameContainer.ScaleTo(1, 200, Easing.CubicIn);
+			await BotImage.RotateToAsync(BotImage.Rotation + 720, 800, Easing.CubicOut);
+			await GameContainer.ScaleToAsync(1.03, 200, Easing.CubicOut);
+			await GameContainer.ScaleToAsync(1, 200, Easing.CubicIn);
 		}
 		else if (score >= 20)
 		{

@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Practica1_MAUI_WilmarGomez_20240103;
+namespace Practica2_MAUI_WilmarGomez_20240103;
 
 public class Program
 {
