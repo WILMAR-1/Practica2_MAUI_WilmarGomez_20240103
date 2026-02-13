@@ -5,7 +5,7 @@
 ## INFORMACIÓN GENERAL
 
 -   **Asignatura:** Introducción al Desarrollo de Aplicaciones Móviles
--   **Período:** 2016-C1
+-   **Período:** 2026-C1
 -   **Semana:** 2
 -   **Instructor:** Michael Grullon
 -   **Valor:** 2 puntos (de 8 puntos totales de prácticas del Primer Período)
